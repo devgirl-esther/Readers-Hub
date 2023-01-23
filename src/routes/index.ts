@@ -2,6 +2,7 @@ import express, {Response, Request, NextFunction} from  "express";
 import fs from "fs";
 import path from 'path';
 const router = express.Router();
+const jsonwebtoken = require("jsonwebtoken");
 
 //create a variable and store the users information  and books path inside.
 const usersDataPath = path.join(__dirname, "../../database/users.json");
@@ -273,7 +274,7 @@ router.post('/booksdisplay', function(req:Request, res:Response){
     //update the database
 
     fs.writeFileSync(booksDataPath, JSON.stringify(deleteFromData),{encoding: "utf8", flag: "w"});
-    res.render("dashboard")
+    res.render("deletesuccess")
   })
   
   

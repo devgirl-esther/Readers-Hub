@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const router = express_1.default.Router();
+const jsonwebtoken = require("jsonwebtoken");
 //create a variable and store the users information  and books path inside.
 const usersDataPath = path_1.default.join(__dirname, "../../database/users.json");
 let usersData;
@@ -219,6 +220,6 @@ router.get("/delete/:id", function (req, res) {
     //delete
     //update the database
     fs_1.default.writeFileSync(booksDataPath, JSON.stringify(deleteFromData), { encoding: "utf8", flag: "w" });
-    res.render("dashboard");
+    res.render("deletesuccess");
 });
 exports.default = router;
