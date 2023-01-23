@@ -1,0 +1,11 @@
+extends layout
+block content
+    h1= title
+    p Status
+    - if(error){
+      p#error Please retry.
+    - }else{
+      p#success #{bookTitle}#{message}.
+    - }
+    a(href="/dashboard")
+        i(class="fa-regular fa-circle-left") Go to Dashboard

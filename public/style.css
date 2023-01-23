@@ -1,0 +1,165 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: bisque;
+  }
+  
+  a {
+    color: black
+  }
+  div1{
+    border: 1px solid #F5F5F5;
+  }
+  .l{
+    
+    border: 2px solid #F5F5F5;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+  
+  
+
+img{ 
+  height: 120px;
+  width:120px
+
+}
+.container{
+  display:flex;
+}
+.form_wrapper{
+  border: 2px solid #F5F5F5;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+.form{
+  width: 50%;
+}
+.full{
+  width: 40%;
+  height: 50%;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 30%;
+}
+.index{
+  border: 2px solid #f5f5f5;
+  background-color: white;
+  margin-left: 300px;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+}
+.inner{
+text-align: center;
+}
+.buttonlogin{
+  display: flex;
+}
+.btns{
+  margin-left: 40%;
+  margin-right: 20px;
+  text-align: center;
+
+}
+/* .btnc{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+} */
+
+.container12 {
+  text-align: center;
+}
+
+.display{
+  width: 80%;
+}
+
+.title{
+  
+  font-size: larger;
+  font-weight: 1000;
+}
+
+span{
+  display: inline-block;
+  border: 1px solid #F5F5F5;
+  padding: 10px;
+  margin: 10px 0px;
+}
+input{
+  margin: 5px 15px ;
+  height: 25px;
+}
+.input1{
+display: flex;
+
+
+margin: 10px 10px;
+}
+#inputDate{
+  width: 200px;
+  border: 2px solid #F5F5F5;
+}
+.success{
+  width: 40%;
+  border: 2px solid #F5F5F5;
+  background-color: white;
+  padding: 10px;
+  margin: 10px 10px
+}
+
+.container13{
+  display: flex;
+  background-color: bisque;
+  border-radius: 5%;
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+
+
+}
+.eachBook{
+  border: 1px solid #F5F5F5;
+  text-align: left;
+  padding-left: 10%;
+}
+.eachbookdisplay{
+  border: 1px solid #F5F5F5;
+  text-align: left;
+  padding-left: 10%;
+}
+.eachBook p{
+  text-decoration: none;
+}
+
+.bookdisplay{
+  width: 65%;
+  background-color: white;
+  border-radius: 10px;
+}
+.display{
+  background-color: white;
+  width: 30%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+.input{
+  display: flex;
+}
+.label{
+  font-size: 14px;
+  font-weight: 100;
+  padding-top: 10px;
+}
+.success{
+  text-align: center;
+  margin-left: 28%;
+}

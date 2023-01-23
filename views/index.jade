@@ -1,5 +1,35 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  
+  p 
+     
+    - if(error){
+      p#error Please fill all fields
+    - }else{
+      p 
+    - }
+    div.index
+      h1 Login
+      div.inner
+        form(action="/dashboard", method="POST")
+          div.input_field 
+            span
+              i(aria-hidden="true" class="fa fa-user")
+              input(type="text" name="name" placeholder="First Name")     
+          div.input_field 
+            span 
+              i(aria-hidden="true" class="fa fa-envelope")
+              input(type="email" name="email" placeholder="Email" required)
+          div.input_field 
+            span
+              i(aria-hidden="true" class="fa fa-lock")
+              input(type="password" name="password" placeholder="Password" required)
+          p.input_field
+            span
+                  input(type="submit" value="Signup" class="submit")
+          div.input_field
+            p.input
+          p.input_field 
+            span
+              a.push(href="/login") Login

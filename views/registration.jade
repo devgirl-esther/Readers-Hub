@@ -1,0 +1,40 @@
+extends layout
+block content
+  h1
+    - if(error){
+      p#error Please fill all fields
+    - }else{
+      p 
+    - }
+  form(action="/dashboard", method="POST")
+    div.form_wrapper
+        div.form_container
+            div
+                h1 Register 
+            div.row_clearfix
+                div.str
+                div#image
+                    img(src="https://i.pinimg.com/564x/57/b5/8c/57b58c6a3f92e02ecfe75c79c06aaa0e.jpg" alt="Book Image") 
+            div.input_field 
+                span
+                    i(aria-hidden="true" class="fa fa-user")
+                    input(type="text" name="name" placeholder="First Name")     
+            div.input_field 
+                span 
+                    i(aria-hidden="true" class="fa fa-envelope")
+                    input(type="email" name="email" placeholder="Email" required)
+                div.input_field 
+                span
+                    i(aria-hidden="true" class="fa fa-lock")
+                    input(type="password" name="password" placeholder="Password" required)
+                div.row_clearfix
+                    div.col_half
+                
+                div.input_field_checkbox_option
+                    input(type="checkbox" id="cb1")
+                    label(for="cb1") I agree with terms and conditions.
+                    div.input_field checkbox_option
+                    input(type="checkbox" id="cb2")
+                    label(for="cb2") I want to receive the newsletter
+                    input(class="button" type="submit" value="Register")
+            a(href="/login") Login

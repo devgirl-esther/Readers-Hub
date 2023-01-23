@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  
+  
+    - if(error){
+      p#error Please fill all fields
+    - }else{
+      
+    - }
+
+    div.container13
+      div.display 
+        h1 Dashboard
+          div.form
+            form(action="/booksdisplay", method="POST")
+              .input1
+                label(for='title' class="label") Book Title
+                input(type="text", placeholder="Enter Book Title...", name="title")
+              .input1
+                label(for='author' class="label") Author
+                input(type="text", placeholder="Enter Authors name ...", name="author")
+              .input1
+                label(for='description' class="label") Book Description
+                input(type="text", placeholder="Enter Book Description ...", name="description")
+              .input1
+                label(for='date' class="label") Date
+                input(type="date" name="datepublished" id="inputDate") 
+              .input1
+                label(for='pagecount' class="label") Page Count
+                input(type="number", placeholder="Enter page  count ...", name="pagecount")
+              .input1
+                label(for='bookgenre' class="label") Book Genre
+                input(type="text", placeholder="Enter Book genre ...", name="bookgenre")
+              .input1
+                label(for='publishername' class="label") Publisher Name
+                input(type="text", placeholder="Enter Publisher...", name="publishername")
+              .input1
+                input(type="submit" value="submit" class="submit")
+      div.bookdisplay
+        div#books
+          p 
+          div.grid
+            -let books = displayBooks;
+            -if(!displayBooks){
+              p No book found
+            -}else{
+            -for book in books 
+              -let idOfBooks = book.bookId;
+              -let url = "/book/"+idOfBooks 
+              div.eachBook
+                a(href= url)
+                  h3= book.title 
+                p= book.author
+            -}
+      
+

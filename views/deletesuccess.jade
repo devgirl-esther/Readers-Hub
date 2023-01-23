@@ -1,0 +1,12 @@
+extends layout
+block content
+    .success
+        h1= title
+        - if(error){
+        p#error Please retry.
+        - }else{
+            i(class="fa-solid fa-check fa-5x")
+            p#deleted #{bookTitle} #{message}.
+        - }
+        a(href="/dashboard")
+            span Back to Dashboard

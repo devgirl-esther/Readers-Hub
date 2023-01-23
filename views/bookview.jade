@@ -1,0 +1,75 @@
+extends layout
+
+block content
+  
+  
+    - if(error){
+      p#error Please fill all fields
+    - }else{
+      
+    - }
+
+    div.container13
+      div.display 
+        h1 Dashboard
+        -let book = displayBook;
+          div.form
+            form(action="/updatebook", method="POST")
+              .input1
+                label(for='title' class="label") Book Title
+                input(type="text", value=`${displayBook.title}`, name="title")
+              .input1
+                label(for='author' class="label") Author
+                input(type="text", value=`${displayBook.author}`, name="author")
+              .input1
+                label(for='description' class="label") Book Description
+                input(type="text", value=`${displayBook.description}`, name="description")
+              .input1
+                label(for='date' class="label") Date
+                input(type="date" name="datepublished" id="inputDate") 
+              .input1
+                label(for='pagecount' class="label") Page Count
+                input(type="number", value=`${displayBook.pageCount}`, name="pagecount")
+              .input1
+                label(for='bookgenre' class="label") Book Genre
+                input(type="text", value=`${displayBook.genre}`, name="bookgenre")
+              .input1
+                label(for='publishername' class="label") Publisher Name
+                input(type="text", value=`${displayBook.publisher}`, name="publishername")
+                input(type="hidden", value=`${displayBook.bookId}`, name="id")
+              .input1
+                input(type="submit" value="submit" class="submit")
+      div.bookdisplay
+        div#books
+          p 
+          div.grid
+                div.eachbookdisplay
+                    label(for='title' class="label") Title 
+                    span= displayBook.title
+                    p
+                    label(for='author' class="label") Author
+                    span= displayBook.author 
+                    p
+                    label(for='datePublished' class="label") Date Published
+                    span= displayBook.datePublished
+                    p
+                    label(for='pagecount' class="label") Page Count
+                    span= displayBook.pageCount
+                    p
+                    label(for='genre' class="label") Genre
+                    span= displayBook.genre
+                    p
+                    label(for='bookId' class="label") Book Id
+                    span= displayBook.bookId 
+                    p
+                    label(for='publisher' class="label") Publisher
+                    span= displayBook.publisher
+                    p
+                .buttondelete
+                    -let url = `/delete/${displayBook.bookId}`;
+                    a(href=url)
+                        button.btns.btn-primary(type='delete') Delete
+                
+                
+     
+
